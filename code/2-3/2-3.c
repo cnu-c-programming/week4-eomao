@@ -6,16 +6,17 @@ int main(){
     char b[64] = "world";
     char c[128];
 
-    size_t len = strlen(a);
-    printf("length of a: %zu\n",len);
+    int len = strlen(a);
+    printf("length of a: %d\n", len);
 
     strcpy(c, a);
     printf("a: %s, c: %s\n", a, c);
 
-    strcat(c,b);
+    strcat(c, " ");
+    strcat(c, b);
     printf("c: %s\n", c);
 
-    printf("strcmp(%s, %s) = %d\n", a, a, strcmp(a,a));
+    printf("strcmp(%s, %s) = %d\n", a, a, strcmp(a, a));
     printf("strcmp(%s, %s) = %d\n", a, b, strcmp(a, b));
 
     return 0;
