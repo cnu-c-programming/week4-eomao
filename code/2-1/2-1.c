@@ -6,7 +6,7 @@ int main(){
     int year, month, day;
 
     sscanf(date, "%d-%d-%d", &year, &month, &day);
-    sprintf(buffer, "%02d/%02d/%04d", day, month, year);
+    sprintf(buffer, "%02d/%01d/%04d", day, month, year);
 
     printf("%s\n", buffer);
     return 0;
