@@ -6,8 +6,8 @@ int main(){
     char b[64] = "world";
     char c[128];
 
-    int len = strlen(a);
-    printf("length of a: %d\n",len);
+    size_t len = strlen(a);
+    printf("length of a: %zu\n",len);
 
     strcpy(c, a);
     printf("a: %s, c: %s\n", a, c);
