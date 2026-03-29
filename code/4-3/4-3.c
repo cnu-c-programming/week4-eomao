@@ -3,8 +3,9 @@
 int main(){
     int arr[] = {3, 7, 1, 9, 4, 6};
     int n = sizeof(arr) / sizeof(arr[0]);
+    int i;
 
-    for(int i = 0; i < n - 1; i++){
+    for(i = 0; i < n - 1; i++){
         void *addr_0 = &arr[i];
         void *addr_1 = &arr[i + 1];
 
