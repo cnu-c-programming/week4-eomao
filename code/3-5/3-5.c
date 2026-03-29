@@ -1,12 +1,19 @@
 #include <stdio.h>
+#include <string.h>
 
 void my_print(char type, void* x){
     if(type == 'C'){
-        printf("%c\n", *(char*)x);
+        unsigned int temp = 0;
+        memcpy(&temp, x, sizeof(temp));
+        printf("%c\n", (unsigned char)temp);
     }else if(type == 'D'){
-        printf("%d\n", *(unsigned char*)x);
-    }else{
+        unsigned char temp = 0;
+        memcpy(&temp, x, sizeof(temp));
+        printf("%u\n", temp);
+    }else if(type == 'S'){
         printf("%s\n", (char*)x);
+    }else{
+        printf("unsupported type\n");
     }
 }
 
