@@ -2,14 +2,12 @@
 
 void my_print(char type, void* x){
     if(type == 'C'){
-        printf("%c\n", x);
+        printf("%c\n", *(char*)x);
     }else if(type == 'D'){
-        printf("%d\n", x);
+        printf("%d\n", *(unsigned char*)x);
     }else{
-        printf("%s\n", x);
+        printf("%s\n", (char*)x);
     }
-
-    return;
 }
 
 int main(){
