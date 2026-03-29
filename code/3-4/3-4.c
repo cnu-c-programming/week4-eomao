@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 void inc(int* x){
-    if(isnull(x)){
+    if(x == NULL){
         return;
     }
     *x = *x + 1;
