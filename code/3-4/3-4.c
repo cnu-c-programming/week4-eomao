@@ -6,6 +6,7 @@ void inc(int* x){
     }
     *x = *x + 1;
     printf("%d\n", *x);
+    return;
 }
 
 int main(){
