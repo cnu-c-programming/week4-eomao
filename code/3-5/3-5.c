@@ -1,10 +1,14 @@
 #include <stdio.h>
 
 void my_print(char type, void* x){
+    static unsigned char prev = 0;
+
     if(type == 'C'){
-        printf("%c\n", *(unsigned char*)x);
+        prev = *(unsigned char*)x;
+        printf("%c\n", prev);
     }else if(type == 'D'){
-        printf("%d\n", *(unsigned char*)x);
+        unsigned char cur = *(unsigned char*)x;
+        printf("%d\n", ((int)prev << 8) | cur);
     }else if(type == 'S'){
         printf("%s\n", (char*)x);
     }
