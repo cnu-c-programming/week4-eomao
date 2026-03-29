@@ -10,9 +10,10 @@ int main(){
 
         printf("address of arr[%d]: %p\n", i, addr_0);
         printf("address of arr[%d]: %p\n", i + 1, addr_1);
-        printf("(&(arr[%d]) - &(arr[%d])) = %llu\n\n",
+        printf("(&(arr[%d]) - &(arr[%d])) = %lld\n",
                i + 1, i,
-               (unsigned long long)((char*)addr_1 - (char*)addr_0));
+               (long long)((char*)addr_1 - (char*)addr_0));
+        printf("\n");
     }
 
     return 0;
